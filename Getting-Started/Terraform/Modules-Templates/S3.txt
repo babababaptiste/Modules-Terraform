@@ -1,0 +1,12 @@
+module "S3" {
+  source = ""
+
+  //Name of the bucket
+  bucket-name = ""
+  //id of your kms key. If you want to create a new key leave this variable empty
+  kms_master_key_id = ""
+  //The server-side encryption algorithm to use. Valid values are AES256 and aws:kms
+  sse_algorithm = ""
+
+  //Possible outputs: S3Name, S3ARN, S3Id, KMSARN, KMSId
+}

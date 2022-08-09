@@ -1,0 +1,28 @@
+module "LaunchTemplate" {
+  source = ""
+
+  #Launch Template
+  //Name for your Launch Template
+  lt-name = ""
+  //Id of your AMI
+  image-id = ""
+  //type of instance you want to launch (To see all instance types : https://aws.amazon.com/fr/ec2/instance-types/)
+  instance-type = ""
+  //Id of oyr security group
+  security-group = ""
+  //Name of your key pair
+  key-name = ""
+  //ARN of your KMS key
+  kms-key-arn = "" 
+  //Name of the device to mount
+  device-name = ""
+  //Size of the volume (GiB)
+  volume-size = 0
+  //Volume type (standard, gp2, gp3, io1, io2, sc1 or st1)
+  volume-type = ""
+  ###Tags###
+  //Instance name
+  instance-name = ""
+
+  //Possible outputs: launchTemplateName, launchTemplateId, launchTemplateARN, Instance-name
+}

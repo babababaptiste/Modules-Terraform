@@ -1,0 +1,37 @@
+module "RDS" {
+  source = ""
+
+  ###DB Instance###
+  //Name for your DB Instance
+  db-name = ""
+  //Allocated storage for the instance
+  allocated-storage = 0
+  //Engine used for the data base
+  engine = ""
+  //Version of the engine
+  engine-version = ""
+  //Type of instance to use
+  instance-class = ""
+  //Username for the user of RDS
+  username = ""
+  //Password for the user of RDS
+  password = ""
+  //To enable a snapshot before closing => set on false
+  skip-final-shot = true
+  ###DB Subnet###
+  //Name for the subnet
+  db-subnet-name = ""
+  //Id of your subnet
+  subnet-id1 = var.Subnets-id[0]
+  //Id of a subnet located in a different AZ 
+  subnet-id2 = var.Subnets-id[1]
+  ###DB Parameter Group###
+  //Name for the paramter group
+  db-pg-name = ""
+  //Name for the parameter
+  parameter-name = ""
+  //Value of the parameter
+  parameter-value = ""
+  //Engin family = engine name + engine version (Ex for mysql 5.7 -> 'mysql5.7')
+  engine-family = ""
+}

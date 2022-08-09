@@ -1,0 +1,29 @@
+module "DynamoDB" {
+  source = "" 
+
+  ###DynamoDB###
+  //Name for your DynamoDB table
+  dynamodb-name = ""
+  //Id of the User
+  user-id = ""
+  //Name of your primary key
+  primary-key-name = ""
+  //Name of your secondary key
+  secondary-key-name = ""
+  //Type of the primary key (S for String, N for number, B for binary)
+  primary-key-type = ""
+  //Type of the secondary key (S for String, N for number, B for binary)
+  secondary-key-type = ""
+  //Read capacity for your table
+  read-capacity = 0
+  //Write capacity for your table
+  write-capacity = 0
+  //Controls how you are charged for read and write throughput and how you manage capacity
+  billing-mode = ""
+  //KMS key arn for the server side encryption
+  kms-key-arn = ""
+  //Time to live. True to able
+  ttl-enabled = false
+
+  //Possible outputs: DynamoDBId, DynamoDBARN
+}

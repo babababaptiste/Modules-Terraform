@@ -1,0 +1,8 @@
+module "EcsCluster" {
+    source = ""
+
+    //Name of the Cluster
+    name = ""
+
+    //Possible outputs: clusterArn
+}

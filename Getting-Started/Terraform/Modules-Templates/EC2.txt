@@ -1,0 +1,22 @@
+module "EC2" {
+  source = ""
+
+  //id of your security group
+  security-group-id = ""
+  //Name of an AMI to find the Id
+  ami-request = ""
+  //id of your AMI (If you don't have one leave it blank)
+  ami-id = ""
+  //type of instance you want to launch (To see all instance types : https://aws.amazon.com/fr/ec2/instance-types/)
+  instance_type = ""
+  //define a name for your instance(To create more instance write their name as a list: ["one", "two", "three"])
+  instance-name = [""]
+  // Whether to associate a public IPV4 address (true/false)
+  AssociatePublicIp = 
+  //Name of your Key Pair
+  keyName = ""
+  //Id of your subnet
+  subnet_id = var.Subnets-id[0]
+
+  //Possible outputs: InstanceId[0], InstanceARN[0], InstanceAMI[0], InstanceIP[0] (The first instance you create is the number 0 the 1, 2, ...)
+}

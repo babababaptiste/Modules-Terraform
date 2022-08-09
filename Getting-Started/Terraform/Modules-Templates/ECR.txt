@@ -1,0 +1,6 @@
+module "ECR" {
+    source = ""
+    
+    //Name of the Repository
+    name = ""
+}

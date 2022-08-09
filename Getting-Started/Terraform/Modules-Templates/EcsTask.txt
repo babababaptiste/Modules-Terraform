@@ -1,0 +1,18 @@
+module "EcsTask" {
+    source = ""
+
+    //Name of your task
+    family                = ""
+    //A list of valid container definitions provided as a single valid JSON document
+    container_definitions = ""
+    //Arn of the associated IAM Role
+    execution_role_arn       = ""
+    //Docker networking mode to use for the containers in the task
+    network_mode             = ""
+    //Amount (in MiB) of memory used by the task
+    memory                   = ""
+    //Number of cpu units used by the task
+    cpu                      = ""
+    //Set of launch types required by the task
+    requires_compatibilities = ""
+}

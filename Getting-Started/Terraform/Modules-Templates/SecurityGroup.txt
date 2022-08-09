@@ -1,0 +1,30 @@
+//Create a new Security group
+module "SecurityGroup" {
+  source = ""
+
+  vpc-id             = var.VPC-id //id of your vpc
+  SG-name            = "" //Name for your security group
+  SG-description     = "" //Description for your security group
+  // Map variable; Type the correspondings informations for each variable
+  ingress-parameters = {
+    "1" = { //You can copy the block "1" and paste it below to create more rules (you also need to change the number of the block)
+      from-port   = 
+      to-port     = 
+      protocol    = ""
+      cidr-blocks = ""
+    }     
+  }
+  // Map variable; Type the correspondings informations for each variable
+  egress-parameters = {
+    "1" = {//You can copy the block "1" and paste it below to create more rules (you also need to change the number of the block)
+      from-port   = 
+      to-port     = 
+      protocol    = ""
+      cidr-blocks = ""
+    }
+    
+  }
+  private_ip_address = "" //If not set the ip is automatically set
+
+  //Possible outputs: security-group-id, security-group-arn
+}

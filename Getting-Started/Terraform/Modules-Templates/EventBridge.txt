@@ -1,0 +1,12 @@
+module "EventBridge"{
+    source = ""
+
+    //Name of the EventBridge resource
+    eventbridge-name = ""
+    //Pattern of the event
+    event-pattern    = ""
+    //Name of the target
+    target-id  = ""
+    //Arn of the target
+    target-arn = ""
+}

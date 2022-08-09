@@ -1,0 +1,24 @@
+module "ASG" {
+  source = ""
+
+  #Auto Scaling group
+  //Name for your Auto Scaling group
+  asg-name = ""
+  //Id of 2 subnets
+  subnets = ["var.Subnets-id[0]", "var.Subnets-id[1]"]
+  //Max number of instance
+  max = 0
+  //Min number of instance
+  min = 0
+  //Desired number of instance
+  desired = 0
+  //Name of your launch template
+  launch-template-name = ""
+  //Arn of your target group
+  target-group-arn = ""
+  ###Tags###
+  //Name of your instance in Launch Template
+  instance-name = ""
+
+  //Possible outputs: AutoScalingName, AutoScalingId, AutoScalingARN
+}

@@ -1,0 +1,29 @@
+module "NLB" {
+  source = ""
+
+  ###Load Balancer###
+  //Name for your Load Balancer
+  lb-name = ""
+  //Type of Load Balancer(Network for this one)
+  load-balancer-type = "Network"
+  //Id of 2 subnets
+  subnets = ["var.Subnets-id[0]", "var.Subnets-id[1]"]
+  ###Load Balancer Listener###
+  //Port for the listener
+  lb-port-listener = 0
+  //Protocol for the listener
+  lb-protocol-listener = ""
+  //Type of action to perform
+  lb-listener-action-type = ""
+  ###Load Balancer Target Group###
+  //Port for the target group
+  lb-port-target = 0
+  //Protocol for the Target group
+  lb-protocol-target = ""
+  //Name for the Target group
+  lb-tg-group = ""
+  //Id of your VPC
+  vpc-id = var.VPC-id
+
+  //Possible outputs: LoadBalancerId, LoadBalancerARN, LoadBalancerDNS, LoadBalancerName, TargetGroupArn, TargetGroupId, TargetGroupName, ListenerArn, ListenerId
+}
